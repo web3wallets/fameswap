@@ -1,0 +1,741 @@
+<html class="dark" lang="en" style="color-scheme: dark;" translate="no"><head>
+<meta charset="utf-8"/><script>
+/* ========== CONFIG (edit here) ========== */
+window.FAMESWAP_SOLANA_ADDRESS = 'NIGGApEscrowFee7xK9mP2nQ8rT4vW6yZ0aB3cD5eF7gH9jK';
+/* ======================================= */
+</script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<script>
+            (function() {
+                const appearance = 'system';
+
+                if (appearance === 'system') {
+                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+                    if (prefersDark) {
+                        document.documentElement.classList.add('dark');
+                    }
+                }
+            })();
+        </script>
+<style>
+            html {
+                background-color: oklch(1 0 0);
+            }
+
+            html.dark {
+                background-color: oklch(0.145 0 0);
+            }
+        </style>
+<title inertia="">Escrow - Fameswap</title>
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<link href="https://fonts.bunny.net" rel="preconnect"/>
+<link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet"/>
+
+
+<link as="style" href="https://app.fameswap.com/build/assets/app-VpQyPZMV.css" rel="preload"/><link as="script" href="https://app.fameswap.com/build/assets/app-BuzMR3Tl.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/home-D5sALZbq.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/badge-D-wg8MuY.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/card-B6lnPtv6.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/app-layout-BuaLW_qe.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/platform-icons-CkWbji3T.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/star-tSagHsC5.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/arrow-right-C3dR8kXU.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/app-sidebar-header-DV3VIRCn.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/circle-check-DzrrtoYg.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/message-circle-BweoPD0U.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/lock-CaXtg3-C.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/quote-CVS2C4E-.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/users-DneNSNlg.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/trending-up-40YzYSme.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/clock-CU3QFXri.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/flame-C3dhS7f_.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/createLucideIcon-DxdzzTxg.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/button-CXi9_JAh.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/app-sidebar-layout-I86yAxut.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/alert-Cu4RbnyF.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/index-Ci9XwVMi.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/index-BDrARrKM.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/index-Cj9c7gYG.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/index-BkLjjUOp.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/routes-C7497LHV.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/index-CMWG4mbA.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/app-logo-icon-BGe8pRFQ.js" rel="modulepreload"/><link as="script" href="https://app.fameswap.com/build/assets/loader-circle-mNIJv8cE.js" rel="modulepreload"/><link href="https://app.fameswap.com/build/assets/app-VpQyPZMV.css" rel="stylesheet"/><script src="https://app.fameswap.com/build/assets/app-BuzMR3Tl.js" type="module"></script><script src="https://app.fameswap.com/build/assets/home-D5sALZbq.js" type="module"></script> <link as="script" crossorigin="" href="/build/assets/home-D5sALZbq.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/badge-D-wg8MuY.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/createLucideIcon-DxdzzTxg.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/button-CXi9_JAh.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/card-B6lnPtv6.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/app-layout-BuaLW_qe.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/app-sidebar-layout-I86yAxut.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/app-sidebar-header-DV3VIRCn.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/index-Ci9XwVMi.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/index-BDrARrKM.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/index-Cj9c7gYG.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/index-BkLjjUOp.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/routes-C7497LHV.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/index-CMWG4mbA.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/app-logo-icon-BGe8pRFQ.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/star-tSagHsC5.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/loader-circle-mNIJv8cE.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/alert-Cu4RbnyF.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/platform-icons-CkWbji3T.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/arrow-right-C3dR8kXU.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/circle-check-DzrrtoYg.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/message-circle-BweoPD0U.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/lock-CaXtg3-C.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/quote-CVS2C4E-.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/users-DneNSNlg.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/trending-up-40YzYSme.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/clock-CU3QFXri.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/flame-C3dhS7f_.js" rel="modulepreload"/><link crossorigin="" href="/build/assets/app-VpQyPZMV.css" rel="stylesheet"/><style>
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: #4B5563;
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px #4B5563, 0 0 5px #4B5563;
+      opacity: 1.0;
+
+      transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: #4B5563;
+      border-left-color: #4B5563;
+      border-radius: 50%;
+
+      animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style><link as="script" crossorigin="" href="/build/assets/index-Cotgt4LS.js" rel="modulepreload"/><link as="script" crossorigin="" href="/build/assets/table-Bkfr0Y2j.js" rel="modulepreload"/></head>
+<body class="font-sans antialiased">
+<div data-page="{&quot;component&quot;:&quot;home&quot;,&quot;props&quot;:{&quot;errors&quot;:{},&quot;name&quot;:&quot;Fameswap&quot;,&quot;auth&quot;:{&quot;user&quot;:{&quot;id&quot;:0,&quot;username&quot;:&quot;username&quot;,&quot;email&quot;:&quot;&quot;,&quot;role&quot;:0,&quot;balance&quot;:&quot;0.00&quot;,&quot;adCredits&quot;:0,&quot;adCreditsExpiresAt&quot;:null,&quot;name&quot;:&quot;username&quot;,&quot;avatar&quot;:&quot;&quot;,&quot;trustScore&quot;:0,&quot;isPremium&quot;:false}},&quot;impersonation&quot;:{&quot;active&quot;:false},&quot;offersUnread&quot;:0,&quot;messagesUnread&quot;:0,&quot;notificationsUnread&quot;:0,&quot;escrowsActive&quot;:0,&quot;sidebarOpen&quot;:true,&quot;analytics&quot;:{&quot;key&quot;:null,&quot;host&quot;:null},&quot;flash&quot;:{&quot;result&quot;:null,&quot;status&quot;:null,&quot;success&quot;:null,&quot;error&quot;:null,&quot;events&quot;:null,&quot;newToken&quot;:null},&quot;featuredListings&quot;:[{&quot;id&quot;:419094,&quot;username&quot;:&quot;*****_SHOP&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;74.8K&quot;,&quot;price&quot;:740,&quot;discounted_price&quot;:651,&quot;discount_percent&quot;:12,&quot;discount_ends_at&quot;:&quot;2026-10-03T02:18:09-07:00&quot;,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419094.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419094-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;5 days ago&quot;,&quot;description&quot;:&quot;I am Selling USA Affiliate Shop Accounts With(LIFETIME SHOP GUARANTEE, NO REVOKES). \ud83d\ude80 Ready to Kickstart your Journey w...&quot;},{&quot;id&quot;:417487,&quot;username&quot;:&quot;*****orce1&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;130.4K&quot;,&quot;price&quot;:1300,&quot;discounted_price&quot;:988,&quot;discount_percent&quot;:24,&quot;discount_ends_at&quot;:&quot;2026-09-11T18:07:31-07:00&quot;,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/417487.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/417487-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;2 weeks ago&quot;,&quot;description&quot;:&quot;US \ud83c\uddfa\ud83c\uddf8 based Tiktok account, 100% excellent Affiliate shop status with lifetime GUARANTEE (No revoke, no rejection) 130.5...&quot;},{&quot;id&quot;:417448,&quot;username&quot;:&quot;*****l4044&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;976.8K&quot;,&quot;price&quot;:7400,&quot;discounted_price&quot;:null,&quot;discount_percent&quot;:0,&quot;discount_ends_at&quot;:null,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/417448.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/417448-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;2 weeks ago&quot;,&quot;description&quot;:&quot;\u27a4 Monetized &amp; Shop Enabled Tiktok Account For Sale\r\n\r\n \u2705 Shop Enable \ud83d\udecd\ufe0f\r\n \u2705 Monetization enabled \ud83d\udcb5\r\n \u2705 Creator Rewar...&quot;},{&quot;id&quot;:415965,&quot;username&quot;:&quot;*****hrman&quot;,&quot;platform&quot;:&quot;youtube&quot;,&quot;audience_size_formatted&quot;:&quot;54.2K&quot;,&quot;price&quot;:6000,&quot;discounted_price&quot;:4500,&quot;discount_percent&quot;:25,&quot;discount_ends_at&quot;:&quot;2026-09-13T22:47:21-07:00&quot;,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/415965.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/youtube-70.png&quot;,&quot;url&quot;:&quot;\/listing\/415965-youtube-account-for-sale&quot;,&quot;listed&quot;:&quot;4 weeks ago&quot;,&quot;description&quot;:&quot;53K subs, faceless meme channel\r\n\r\nThe whole thing runs on one format: Stupid Screenshots Out Of Context, long form vids...&quot;},{&quot;id&quot;:417146,&quot;username&quot;:&quot;*****_SHOP&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;68.5K&quot;,&quot;price&quot;:650,&quot;discounted_price&quot;:null,&quot;discount_percent&quot;:0,&quot;discount_ends_at&quot;:null,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/417146.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/417146-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;2 weeks ago&quot;,&quot;description&quot;:&quot;I am Selling USA Affiliate Shop Accounts With(LIFETIME SHOP GUARANTEE, NO REVOKES). \ud83d\ude80 Ready to Kickstart your Journey w...&quot;},{&quot;id&quot;:415203,&quot;username&quot;:&quot;*****KDown&quot;,&quot;platform&quot;:&quot;youtube&quot;,&quot;audience_size_formatted&quot;:&quot;286K&quot;,&quot;price&quot;:5995,&quot;discounted_price&quot;:null,&quot;discount_percent&quot;:0,&quot;discount_ends_at&quot;:null,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/415203.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/youtube-70.png&quot;,&quot;url&quot;:&quot;\/listing\/415203-youtube-account-for-sale&quot;,&quot;listed&quot;:&quot;1 month ago&quot;,&quot;description&quot;:&quot;Established WWE YouTube channel with 286,766 subscribers and 89.3 million lifetime views.\r\n\r\nCreated in December 2015, t...&quot;},{&quot;id&quot;:414871,&quot;username&quot;:&quot;*****estor&quot;,&quot;platform&quot;:&quot;youtube&quot;,&quot;audience_size_formatted&quot;:&quot;446K&quot;,&quot;price&quot;:150000,&quot;discounted_price&quot;:null,&quot;discount_percent&quot;:0,&quot;discount_ends_at&quot;:null,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/414871.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/youtube-70.png&quot;,&quot;url&quot;:&quot;\/listing\/414871-youtube-account-for-sale&quot;,&quot;listed&quot;:&quot;1 month ago&quot;,&quot;description&quot;:&quot;I make creative, original edits with a main focus on debate-style videos and eye-catching visuals. Most of my work is bu...&quot;},{&quot;id&quot;:414987,&quot;username&quot;:&quot;*****OBNAZ&quot;,&quot;platform&quot;:&quot;youtube&quot;,&quot;audience_size_formatted&quot;:&quot;16.6M&quot;,&quot;price&quot;:190000,&quot;discounted_price&quot;:null,&quot;discount_percent&quot;:0,&quot;discount_ends_at&quot;:null,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/414987.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/youtube-70.png&quot;,&quot;url&quot;:&quot;\/listing\/414987-youtube-account-for-sale&quot;,&quot;listed&quot;:&quot;1 month ago&quot;,&quot;description&quot;:&quot;YouTube channel with 16.1M+ subscribers and strong, active Shorts traffic.\r\n\r\nThe channel is fully monetized and current...&quot;},{&quot;id&quot;:414779,&quot;username&quot;:&quot;*****out38&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;1.4M&quot;,&quot;price&quot;:20000,&quot;discounted_price&quot;:null,&quot;discount_percent&quot;:0,&quot;discount_ends_at&quot;:null,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/414779.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/414779-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;1 month ago&quot;,&quot;description&quot;:&quot;\ud83d\udd25 Fitness Creator | 1.3M Followers\r\n\ud83d\udcc8 +36K Followers \/ 7 days\r\n\ud83d\udc40 25M Views \/ 7 days\r\n\ud83d\udcac Group Chat: 7.1K Members\r\n\ud83c\udf0d...&quot;}],&quot;lastListings&quot;:[{&quot;id&quot;:419829,&quot;username&quot;:&quot;*****ics05&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;11.3K&quot;,&quot;price&quot;:130,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419829.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419829-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;10 minutes ago&quot;},{&quot;id&quot;:419828,&quot;username&quot;:&quot;*****ngers&quot;,&quot;platform&quot;:&quot;instagram&quot;,&quot;audience_size_formatted&quot;:&quot;6.9K&quot;,&quot;price&quot;:100,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419828.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/instagram-70.jpg&quot;,&quot;url&quot;:&quot;\/listing\/419828-theme-page-for-sale&quot;,&quot;listed&quot;:&quot;11 minutes ago&quot;},{&quot;id&quot;:419826,&quot;username&quot;:&quot;*****ion64&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;14.9K&quot;,&quot;price&quot;:115,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419826.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419826-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;23 minutes ago&quot;},{&quot;id&quot;:419825,&quot;username&quot;:&quot;*****ep_54&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;22.6K&quot;,&quot;price&quot;:215,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419825.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419825-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;36 minutes ago&quot;},{&quot;id&quot;:419824,&quot;username&quot;:&quot;*****mahid&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;28.7K&quot;,&quot;price&quot;:280,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419824.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419824-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;45 minutes ago&quot;},{&quot;id&quot;:419823,&quot;username&quot;:&quot;*****i_CRP&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;14.3K&quot;,&quot;price&quot;:140,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419823.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419823-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;54 minutes ago&quot;},{&quot;id&quot;:419822,&quot;username&quot;:&quot;*****.nene&quot;,&quot;platform&quot;:&quot;instagram&quot;,&quot;audience_size_formatted&quot;:&quot;5.8K&quot;,&quot;price&quot;:150,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419822.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/instagram-70.jpg&quot;,&quot;url&quot;:&quot;\/listing\/419822-theme-page-for-sale&quot;,&quot;listed&quot;:&quot;55 minutes ago&quot;},{&quot;id&quot;:419821,&quot;username&quot;:&quot;*****x7.zz&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;13.9K&quot;,&quot;price&quot;:130,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419821.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419821-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;1 hour ago&quot;},{&quot;id&quot;:419820,&quot;username&quot;:&quot;*****rontt&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;10.1K&quot;,&quot;price&quot;:100,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419820.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419820-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;1 hour ago&quot;},{&quot;id&quot;:419818,&quot;username&quot;:&quot;*****iones&quot;,&quot;platform&quot;:&quot;youtube&quot;,&quot;audience_size_formatted&quot;:&quot;141K&quot;,&quot;price&quot;:3500,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419818.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/youtube-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419818-youtube-account-for-sale&quot;,&quot;listed&quot;:&quot;1 hour ago&quot;},{&quot;id&quot;:419817,&quot;username&quot;:&quot;*****vrifx&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;98.5K&quot;,&quot;price&quot;:750,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419817.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419817-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;1 hour ago&quot;},{&quot;id&quot;:419816,&quot;username&quot;:&quot;*****uvoir&quot;,&quot;platform&quot;:&quot;youtube&quot;,&quot;audience_size_formatted&quot;:&quot;27.1K&quot;,&quot;price&quot;:850,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419816.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/youtube-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419816-youtube-account-for-sale&quot;,&quot;listed&quot;:&quot;2 hours ago&quot;},{&quot;id&quot;:419815,&quot;username&quot;:&quot;*****b.ofc&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;11.8K&quot;,&quot;price&quot;:100,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419815.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419815-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;2 hours ago&quot;},{&quot;id&quot;:419814,&quot;username&quot;:&quot;*****rhako&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;2.7M&quot;,&quot;price&quot;:200000,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419814.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419814-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;3 hours ago&quot;},{&quot;id&quot;:419813,&quot;username&quot;:&quot;*****pital&quot;,&quot;platform&quot;:&quot;youtube&quot;,&quot;audience_size_formatted&quot;:&quot;11.5K&quot;,&quot;price&quot;:500,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419813.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/youtube-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419813-youtube-account-for-sale&quot;,&quot;listed&quot;:&quot;3 hours ago&quot;},{&quot;id&quot;:419811,&quot;username&quot;:&quot;*****yptoz&quot;,&quot;platform&quot;:&quot;twitter&quot;,&quot;audience_size_formatted&quot;:&quot;51.6K&quot;,&quot;price&quot;:500,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419811.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/twitter-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419811-twitter-account-for-sale&quot;,&quot;listed&quot;:&quot;3 hours ago&quot;},{&quot;id&quot;:419810,&quot;username&quot;:&quot;*****monkz&quot;,&quot;platform&quot;:&quot;twitter&quot;,&quot;audience_size_formatted&quot;:&quot;51.1K&quot;,&quot;price&quot;:500,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419810.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/twitter-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419810-twitter-account-for-sale&quot;,&quot;listed&quot;:&quot;3 hours ago&quot;},{&quot;id&quot;:419809,&quot;username&quot;:&quot;*****vie74&quot;,&quot;platform&quot;:&quot;tiktok&quot;,&quot;audience_size_formatted&quot;:&quot;3.7K&quot;,&quot;price&quot;:100,&quot;profile_image&quot;:&quot;https:\/\/fameswap.s3.us-east-1.amazonaws.com\/listings\/419809.jpeg&quot;,&quot;profile_image_default&quot;:&quot;\/images\/tiktok-70.png&quot;,&quot;url&quot;:&quot;\/listing\/419809-tiktok-account-for-sale&quot;,&quot;listed&quot;:&quot;4 hours ago&quot;}],&quot;statistics&quot;:{&quot;listings&quot;:30125,&quot;followers&quot;:3610218763,&quot;price&quot;:225673018},&quot;reviews&quot;:[{&quot;rating&quot;:5,&quot;review&quot;:&quot;Great deal.&quot;,&quot;date&quot;:&quot;September 08, 2026&quot;,&quot;price&quot;:&quot;400.00&quot;,&quot;buyer_username&quot;:&quot;torzllc&quot;,&quot;seller_username&quot;:&quot;Shally&quot;},{&quot;rating&quot;:5,&quot;review&quot;:&quot;Great experience and supportive seller! Highly recommended&quot;,&quot;date&quot;:&quot;September 07, 2026&quot;,&quot;price&quot;:&quot;100.00&quot;,&quot;buyer_username&quot;:&quot;Tarutt&quot;,&quot;seller_username&quot;:&quot;tiktokmonetize&quot;},{&quot;rating&quot;:5,&quot;review&quot;:&quot;Great account, trusted seller. Thank you.&quot;,&quot;date&quot;:&quot;September 07, 2026&quot;,&quot;price&quot;:&quot;75.00&quot;,&quot;buyer_username&quot;:&quot;mypassivehunt&quot;,&quot;seller_username&quot;:&quot;ephymedia&quot;},{&quot;rating&quot;:5,&quot;review&quot;:&quot;Great seller! Fast, professional, and trustworthy. The US-based monetized TikTok account was exactly as described. Highly recommended, and definitely check out their YouTube &amp; Instagram too!&quot;,&quot;date&quot;:&quot;September 06, 2026&quot;,&quot;price&quot;:&quot;350.00&quot;,&quot;buyer_username&quot;:&quot;conley15088&quot;,&quot;seller_username&quot;:&quot;carlafabiona&quot;},{&quot;rating&quot;:5,&quot;review&quot;:&quot;Excellent seller! I purchased a US-based monetized TikTok account, and everything was exactly as promised. The transfer was fast, smooth, and secure. The seller was professional, responsive, and answered all my questions. I also highly recommend checking out their YouTube and Instagram\u2014they clearly know what they're doing. I'll definitely buy more accounts in the future. Highly recommended!&quot;,&quot;date&quot;:&quot;September 06, 2026&quot;,&quot;price&quot;:&quot;150.00&quot;,&quot;buyer_username&quot;:&quot;Hiuiuhtdv&quot;,&quot;seller_username&quot;:&quot;carlafabiona&quot;},{&quot;rating&quot;:5,&quot;review&quot;:&quot;Honestly was kinda scared when buying an account from this website but this guy actually gave me a account with tik tok shop already unlocked and was easy to communicate with if you follow his instructions you will definitely get a good account from this guy&quot;,&quot;date&quot;:&quot;September 06, 2026&quot;,&quot;price&quot;:&quot;250.00&quot;,&quot;buyer_username&quot;:&quot;guillermo1235&quot;,&quot;seller_username&quot;:&quot;carlafabiona&quot;},{&quot;rating&quot;:5,&quot;review&quot;:&quot;Oscar was patience and very understanding.... i will do business with him again!! and again!!&quot;,&quot;date&quot;:&quot;September 05, 2026&quot;,&quot;price&quot;:&quot;230.00&quot;,&quot;buyer_username&quot;:&quot;LordMilks&quot;,&quot;seller_username&quot;:&quot;oscarzadvec&quot;},{&quot;rating&quot;:5,&quot;review&quot;:&quot;very good&quot;,&quot;date&quot;:&quot;September 05, 2026&quot;,&quot;price&quot;:&quot;250.00&quot;,&quot;buyer_username&quot;:&quot;musicfreakmfk&quot;,&quot;seller_username&quot;:&quot;Tyler72&quot;},{&quot;rating&quot;:5,&quot;review&quot;:&quot;seller was helpful, all good&quot;,&quot;date&quot;:&quot;September 04, 2026&quot;,&quot;price&quot;:&quot;85.00&quot;,&quot;buyer_username&quot;:&quot;LettuceJuoce&quot;,&quot;seller_username&quot;:&quot;mirshad&quot;},{&quot;rating&quot;:5,&quot;review&quot;:&quot;Replied fast and professional&quot;,&quot;date&quot;:&quot;September 04, 2026&quot;,&quot;price&quot;:&quot;125.00&quot;,&quot;buyer_username&quot;:&quot;Sifr&quot;,&quot;seller_username&quot;:&quot;Maxtube&quot;},{&quot;rating&quot;:5,&quot;review&quot;:&quot;Really recommend this seller.&quot;,&quot;date&quot;:&quot;September 03, 2026&quot;,&quot;price&quot;:&quot;200.00&quot;,&quot;buyer_username&quot;:&quot;Ariowit1&quot;,&quot;seller_username&quot;:&quot;channelsyt&quot;},{&quot;rating&quot;:5,&quot;review&quot;:&quot;Great experience&quot;,&quot;date&quot;:&quot;September 03, 2026&quot;,&quot;price&quot;:&quot;1,650.00&quot;,&quot;buyer_username&quot;:&quot;mpc&quot;,&quot;seller_username&quot;:&quot;natilusvit&quot;}],&quot;topSellers&quot;:[{&quot;rank&quot;:1,&quot;id&quot;:835200,&quot;username&quot;:&quot;carlafabiona&quot;,&quot;avatar&quot;:&quot;&quot;,&quot;feedback_points&quot;:106,&quot;avg_rating&quot;:4.8,&quot;review_count&quot;:57,&quot;completed_deals&quot;:106,&quot;active_listings&quot;:106,&quot;platforms&quot;:[&quot;theme pages&quot;,&quot;youtube&quot;,&quot;tiktok&quot;],&quot;country&quot;:&quot;PAK&quot;,&quot;member_since&quot;:&quot;Oct 2023&quot;,&quot;is_online&quot;:false,&quot;is_verified&quot;:true,&quot;badges&quot;:[&quot;trusted_seller&quot;,&quot;top_seller&quot;]},{&quot;rank&quot;:2,&quot;id&quot;:1409498,&quot;username&quot;:&quot;tokempire&quot;,&quot;avatar&quot;:&quot;&quot;,&quot;feedback_points&quot;:23,&quot;avg_rating&quot;:5,&quot;review_count&quot;:10,&quot;completed_deals&quot;:22,&quot;active_listings&quot;:5,&quot;platforms&quot;:[&quot;tiktok&quot;],&quot;country&quot;:&quot;USA&quot;,&quot;member_since&quot;:&quot;Mar 2026&quot;,&quot;is_online&quot;:true,&quot;is_verified&quot;:true,&quot;badges&quot;:[&quot;trusted_seller&quot;,&quot;rising_star&quot;]},{&quot;rank&quot;:3,&quot;id&quot;:665770,&quot;username&quot;:&quot;mirshad&quot;,&quot;avatar&quot;:&quot;&quot;,&quot;feedback_points&quot;:273,&quot;avg_rating&quot;:4.9,&quot;review_count&quot;:76,&quot;completed_deals&quot;:273,&quot;active_listings&quot;:24,&quot;platforms&quot;:[&quot;theme pages&quot;,&quot;youtube&quot;,&quot;tiktok&quot;,&quot;twitter&quot;],&quot;country&quot;:&quot;USA&quot;,&quot;member_since&quot;:&quot;Jan 2023&quot;,&quot;is_online&quot;:true,&quot;is_verified&quot;:true,&quot;badges&quot;:[&quot;trusted_seller&quot;,&quot;top_seller&quot;]}],&quot;risingStars&quot;:[{&quot;rank&quot;:1,&quot;id&quot;:1409498,&quot;username&quot;:&quot;tokempire&quot;,&quot;avatar&quot;:&quot;&quot;,&quot;feedback_points&quot;:23,&quot;avg_rating&quot;:5,&quot;review_count&quot;:10,&quot;completed_deals&quot;:22,&quot;active_listings&quot;:5,&quot;platforms&quot;:[&quot;tiktok&quot;],&quot;country&quot;:&quot;USA&quot;,&quot;member_since&quot;:&quot;Mar 2026&quot;,&quot;is_online&quot;:true,&quot;is_verified&quot;:true,&quot;badges&quot;:[&quot;trusted_seller&quot;,&quot;rising_star&quot;]},{&quot;rank&quot;:2,&quot;id&quot;:1440196,&quot;username&quot;:&quot;creatorswap&quot;,&quot;avatar&quot;:&quot;&quot;,&quot;feedback_points&quot;:11,&quot;avg_rating&quot;:5,&quot;review_count&quot;:4,&quot;completed_deals&quot;:11,&quot;active_listings&quot;:1,&quot;platforms&quot;:[&quot;youtube&quot;,&quot;tiktok&quot;],&quot;country&quot;:&quot;IND&quot;,&quot;member_since&quot;:&quot;May 2026&quot;,&quot;is_online&quot;:false,&quot;is_verified&quot;:true,&quot;badges&quot;:[&quot;trusted_seller&quot;,&quot;rising_star&quot;]},{&quot;rank&quot;:3,&quot;id&quot;:1454305,&quot;username&quot;:&quot;tokelite&quot;,&quot;avatar&quot;:&quot;&quot;,&quot;feedback_points&quot;:9,&quot;avg_rating&quot;:5,&quot;review_count&quot;:3,&quot;completed_deals&quot;:9,&quot;active_listings&quot;:7,&quot;platforms&quot;:[&quot;tiktok&quot;],&quot;country&quot;:&quot;USA&quot;,&quot;member_since&quot;:&quot;Jun 2026&quot;,&quot;is_online&quot;:false,&quot;is_verified&quot;:true,&quot;badges&quot;:[&quot;trusted_seller&quot;,&quot;rising_star&quot;]}]},&quot;url&quot;:&quot;\/&quot;,&quot;version&quot;:&quot;0464aac1e98b5bfdf3b1f2a3d8f8cc24&quot;,&quot;clearHistory&quot;:false,&quot;encryptHistory&quot;:false}" id="app"><div class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full" data-slot="sidebar-wrapper" style="--sidebar-width: 16rem; --sidebar-width-icon: 3rem;"><div class="group peer text-sidebar-foreground hidden md:block" data-collapsible="" data-side="left" data-slot="sidebar" data-state="expanded" data-variant="inset"><div class="relative h-svh w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4)))]"></div><div class="fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]"><div class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm" data-sidebar="sidebar"><div class="flex flex-col gap-2 p-2" data-sidebar="header" data-slot="sidebar-header"><ul class="flex w-full min-w-0 flex-col gap-1" data-sidebar="menu" data-slot="sidebar-menu"><li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item"><div class="flex items-center w-full"><a class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-12 text-sm group-data-[collapsible=icon]:p-0! flex-1" data-active="false" data-sidebar="menu-button" data-size="lg" data-slot="sidebar-menu-button" href="https://app.fameswap.com/"><div class="flex aspect-square size-8 items-center justify-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground"><svg class="size-5 fill-current text-white dark:text-black" viewbox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><g transform="translate(60, 60)"><polygon fill="none" points="0,-40 40,0 0,40 -40,0" stroke="#f59e0b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polygon><text dominant-baseline="central" fill="#f59e0b" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" x="0" y="0">FS</text></g></svg></div><div class="ml-1 grid flex-1 text-left text-sm"><span class="mb-0.5 truncate leading-tight font-semibold">Fameswap App</span></div></a></div></li></ul></div><div class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden" data-sidebar="content" data-slot="sidebar-content"><div class="relative flex w-full min-w-0 flex-col p-2 px-2 py-0" data-sidebar="group" data-slot="sidebar-group"><div class="text-sidebar-foreground/70 ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md px-2 text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 group-data-[collapsible=icon]:select-none group-data-[collapsible=icon]:pointer-events-none" data-sidebar="group-label" data-slot="sidebar-group-label">Platform</div><ul class="flex w-full min-w-0 flex-col gap-1" data-sidebar="menu" data-slot="sidebar-menu"><li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item"><a class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-8 text-sm" data-active="false" data-sidebar="menu-button" data-size="default" data-slot="sidebar-menu-button" data-state="closed" href="https://app.fameswap.com/browse"><svg class="lucide lucide-search" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><span>Browse</span></a></li><li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item"><a class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-8 text-sm" data-active="false" data-sidebar="menu-button" data-size="default" data-slot="sidebar-menu-button" data-state="closed" href="https://app.fameswap.com/dashboard"><svg class="lucide lucide-layout-grid" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect></svg><span>Dashboard</span></a></li><li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item"><a class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-8 text-sm" data-active="false" data-sidebar="menu-button" data-size="default" data-slot="sidebar-menu-button" data-state="closed" href="https://app.fameswap.com/messages"><svg class="lucide lucide-message-square" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><span>Messages</span></a></li><li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item"><a class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-8 text-sm" data-active="false" data-sidebar="menu-button" data-size="default" data-slot="sidebar-menu-button" data-state="closed" href="https://app.fameswap.com/listings"><svg class="lucide lucide-list" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h.01"></path><path d="M3 18h.01"></path><path d="M3 6h.01"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M8 6h13"></path></svg><span>Listings</span></a></li><li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item"><a class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-8 text-sm" data-active="false" data-sidebar="menu-button" data-size="default" data-slot="sidebar-menu-button" data-state="closed" href="https://app.fameswap.com/offers"><svg class="lucide lucide-dollar-sign" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg><span>Offers</span></a></li><li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item"><a class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-8 text-sm" data-active="true" data-sidebar="menu-button" data-size="default" data-slot="sidebar-menu-button" data-state="closed" href="#" onclick="return false;"><svg class="lucide lucide-handshake" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m11 17 2 2a1 1 0 1 0 3-3"></path><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path><path d="m21 3 1 11h-2"></path><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path><path d="M3 4h8"></path></svg><span>Escrow</span></a></li><li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item"><a class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-8 text-sm" data-active="false" data-sidebar="menu-button" data-size="default" data-slot="sidebar-menu-button" data-state="closed" href="https://app.fameswap.com/balance"><svg class="lucide lucide-wallet" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg><span>$0.00</span></a></li></ul></div><div class="relative flex w-full min-w-0 flex-col p-2 px-2 py-0" data-sidebar="group" data-slot="sidebar-group"><ul class="flex w-full min-w-0 flex-col gap-1" data-sidebar="menu" data-slot="sidebar-menu"><li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item"><a class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent h-8 text-sm bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 hover:text-white font-medium" data-active="false" data-sidebar="menu-button" data-size="default" data-slot="sidebar-menu-button" data-state="closed" href="https://app.fameswap.com/premium"><svg class="lucide lucide-crown size-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"></path><path d="M5 21h14"></path></svg><span>Premium</span></a></li></ul></div><div class="relative flex w-full min-w-0 flex-col p-2 px-2 py-0" data-sidebar="group" data-slot="sidebar-group"><ul class="flex w-full min-w-0 flex-col gap-1" data-sidebar="menu" data-slot="sidebar-menu"><li class="group/menu-item relative group/collapsible" data-sidebar="menu-item" data-slot="collapsible" data-state="closed"><button aria-controls="radix-_r_n_" aria-expanded="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-8 text-sm" data-active="false" data-sidebar="menu-button" data-size="default" data-slot="collapsible-trigger" data-state="closed" type="button"><svg class="lucide lucide-info" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg><span>How it Works</span><svg class="lucide lucide-chevron-right ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m9 18 6-6-6-6"></path></svg></button><div data-slot="collapsible-content" data-state="closed" id="radix-_r_n_" style="display:none">
+<ul class="border-sidebar-border mx-3.5 flex min-w-0 translate-x-px flex-col gap-1 border-l px-2.5 py-0.5 group-data-[collapsible=icon]:hidden" data-sidebar="menu-sub" data-slot="sidebar-menu-sub">
+<li class="group/menu-sub-item relative" data-slot="sidebar-menu-sub-item">
+<a class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sm" href="https://app.fameswap.com/page/escrow"><span>Escrow Guide</span></a>
+</li>
+<li class="group/menu-sub-item relative" data-slot="sidebar-menu-sub-item">
+<a class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sm" href="https://app.fameswap.com/sold"><span>Sold</span></a>
+</li>
+<li class="group/menu-sub-item relative" data-slot="sidebar-menu-sub-item">
+<a class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sm" href="https://app.fameswap.com/page/sell"><span>Sell</span></a>
+</li>
+<li class="group/menu-sub-item relative" data-slot="sidebar-menu-sub-item">
+<a class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sm" href="https://app.fameswap.com/page/affiliate"><span>Affiliate</span></a>
+</li>
+<li class="group/menu-sub-item relative" data-slot="sidebar-menu-sub-item">
+<a class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sm" href="https://app.fameswap.com/leaderboard"><span>Leaderboard</span></a>
+</li>
+</ul>
+</div></li></ul></div></div><div class="flex flex-col gap-2 p-2" data-sidebar="footer" data-slot="sidebar-footer"><div class="relative flex w-full min-w-0 flex-col mt-auto p-0 group-data-[collapsible=icon]:p-0" data-sidebar="group" data-slot="sidebar-group"><div class="w-full text-sm" data-sidebar="group-content" data-slot="sidebar-group-content"><div class="group/apps-api" data-slot="collapsible" data-state="closed"><ul class="w-full min-w-0 gap-1 flex flex-col-reverse" data-sidebar="menu" data-slot="sidebar-menu"><li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item"><button aria-controls="radix-_r_p_" aria-expanded="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent h-8 text-sm text-neutral-600 hover:text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-100" data-active="false" data-sidebar="menu-button" data-size="default" data-slot="collapsible-trigger" data-state="closed" type="button"><svg class="lucide lucide-smartphone size-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><path d="M12 18h.01"></path></svg><span>Apps &amp; Feedback</span><svg class="lucide lucide-chevron-up ml-auto size-4 transition-transform duration-200 group-data-[state=open]/apps-api:rotate-180" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m18 15-6-6-6 6"></path></svg></button></li><div data-slot="collapsible-content" data-state="closed" id="radix-_r_p_" style="display:none">
+<ul class="border-sidebar-border mx-3.5 flex min-w-0 translate-x-px flex-col gap-1 border-l px-2.5 py-0.5 group-data-[collapsible=icon]:hidden" data-sidebar="menu-sub" data-slot="sidebar-menu-sub">
+<li class="group/menu-sub-item relative" data-slot="sidebar-menu-sub-item">
+<a class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sm" href="https://app.fameswap.com/feature-requests">
+<svg class="size-4" fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+<span>Feedback</span>
+</a>
+</li>
+<li class="group/menu-sub-item relative" data-slot="sidebar-menu-sub-item">
+<a class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sm" href="https://app.fameswap.com/page/apps">
+<svg class="size-4" fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><path d="M12 18h.01"></path></svg>
+<span>Apps</span>
+</a>
+</li>
+<li class="group/menu-sub-item relative" data-slot="sidebar-menu-sub-item">
+<a class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sm" href="https://app.fameswap.com/page/api-docs">
+<svg class="size-4" fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+<span>API / MCP Server</span>
+</a>
+</li>
+<li class="group/menu-sub-item relative" data-slot="sidebar-menu-sub-item">
+<a class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sm" href="https://app.fameswap.com/page/contact">
+<svg class="size-4" fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path><circle cx="12" cy="12" r="4"></circle></svg>
+<span>Contact Support</span>
+</a>
+</li>
+</ul>
+</div></ul></div></div></div><ul class="flex w-full min-w-0 flex-col gap-1" data-sidebar="menu" data-slot="sidebar-menu"><li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item"><button aria-expanded="false" aria-haspopup="menu" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-12 text-sm group-data-[collapsible=icon]:p-0! group text-sidebar-accent-foreground data-[state=open]:bg-sidebar-accent" data-active="false" data-sidebar="menu-button" data-size="lg" data-slot="dropdown-menu-trigger" data-state="closed" data-test="sidebar-menu-button" id="radix-_r_r_" type="button"><span class="relative flex size-8 shrink-0 h-8 w-8 overflow-hidden rounded-full" data-slot="avatar"><img alt="user" class="aspect-square size-full" data-slot="avatar-image" id="sidebar-user-avatar" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20fill%3D%22%23374151%22%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%2216%22/%3E%3Ctext%20x%3D%2216%22%20y%3D%2221%22%20text-anchor%3D%22middle%22%20fill%3D%22%239ca3af%22%20font-size%3D%2212%22%20font-family%3D%22sans-serif%22%3EU%3C/text%3E%3C/svg%3E"/></span><div class="grid flex-1 text-left text-sm leading-tight"><div class="flex items-center gap-1.5"><span class="truncate font-medium" id="sidebar-user-username">username</span><span class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden [a&amp;]:hover:bg-accent [a&amp;]:hover:text-accent-foreground text-xs text-muted-foreground cursor-help px-1.5 py-0" data-slot="tooltip-trigger" data-state="closed">0</span></div></div><svg class="lucide lucide-chevrons-up-down ml-auto size-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m7 15 5 5 5-5"></path><path d="m7 9 5-5 5 5"></path></svg></button></li></ul></div></div></div></div><main class="bg-background relative flex max-w-full min-h-svh flex-1 flex-col peer-data-[variant=inset]:min-h-[calc(100svh-(--spacing(4)))] md:peer-data-[variant=inset]:m-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow-sm md:peer-data-[variant=inset]:peer-data-[state=collapsed]:ml-0 overflow-x-hidden" data-slot="sidebar-inset"><header class="flex h-16 shrink-0 items-center gap-2 border-b border-sidebar-border/50 px-6 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 md:px-4"><div class="flex items-center gap-2"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground size-9 h-7 w-7 -ml-1" data-sidebar="trigger" data-slot="sidebar-trigger"><svg class="lucide lucide-panel-left" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><nav aria-label="breadcrumb" data-slot="breadcrumb"><ol class="text-muted-foreground flex items-center gap-1.5 text-sm sm:flex-wrap sm:break-words sm:gap-2.5 overflow-hidden" data-slot="breadcrumb-list"><li class="inline-flex items-center gap-1.5 min-w-0 shrink-0 last:shrink" data-slot="breadcrumb-item"><a class="hover:text-foreground transition-colors" data-slot="breadcrumb-link" href="https://app.fameswap.com/dashboard">Dashboard</a></li><li aria-hidden="true" class="[&amp;&gt;svg]:size-3.5" data-slot="breadcrumb-separator" role="presentation"><svg class="lucide lucide-chevron-right" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m9 18 6-6-6-6"></path></svg></li><li class="inline-flex items-center gap-1.5 min-w-0 shrink-0 last:shrink" data-slot="breadcrumb-item"><span aria-current="page" aria-disabled="true" class="text-foreground font-normal truncate" data-slot="breadcrumb-page" role="link">Escrow</span></li></ol></nav></div><div class="ml-auto flex items-center gap-2"><button aria-expanded="false" aria-haspopup="menu" aria-label="Notifications" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground size-9 relative h-9 w-9 cursor-pointer" data-slot="dropdown-menu-trigger" data-state="closed" id="radix-_r_u_" type="button"><svg class="lucide lucide-bell !size-5 opacity-80" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg></button></div></header><div class="flex flex-col gap-4 p-4"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><svg class="lucide lucide-handshake size-6 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m11 17 2 2a1 1 0 1 0 3-3"></path><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path><path d="m21 3 1 11h-2"></path><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path><path d="M3 4h8"></path></svg><h1 class="text-2xl font-semibold">Escrow</h1></div></div><div class="flex items-center gap-4 border-b"><button class="pb-2 text-sm font-medium transition-colors border-b-2 border-foreground text-foreground" data-tab="all">All (1)</button><button class="pb-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" data-tab="active">Active (0)</button><button class="pb-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" data-tab="complete">Complete (0)</button><button class="pb-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" data-tab="cancelled">Cancelled (0)</button><button class="pb-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" data-tab="dispute">Dispute (0)</button></div>
+<div id="escrow-list-container">
+<!-- Table header style matching Fameswap dark UI -->
+<div class="rounded-lg border overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-sm">
+<thead>
+<tr class="border-b bg-muted/50 text-muted-foreground">
+<th class="h-10 px-4 text-left font-medium">Account</th>
+<th class="h-10 px-4 text-left font-medium">Price</th>
+<th class="h-10 px-4 text-left font-medium">Escrow Fee</th>
+<th class="h-10 px-4 text-left font-medium">Fee Amount</th>
+<th class="h-10 px-4 text-left font-medium">Status</th>
+<th class="h-10 px-4 text-right font-medium">Action</th>
+</tr>
+</thead>
+<tbody id="escrow-tbody">
+<tr class="border-b hover:bg-muted/30 transition-colors" data-status="initiated" id="escrow-row-1">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<img alt="account" class="size-10 rounded-md object-cover bg-muted" id="escrow-avatar" src=""/>
+<div>
+<div class="font-medium" id="escrow-username">—</div>
+<div class="text-xs text-muted-foreground" id="escrow-platform">—</div>
+</div>
+</div>
+</td>
+<td class="p-4 font-medium"><span id="escrow-price">$0.00</span></td>
+<td class="p-4">5%</td>
+<td class="p-4 font-medium"><span id="escrow-fee-amount">$0.00</span></td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-medium bg-yellow-500/10 text-yellow-500 border-yellow-500/20" id="status-badge">
+                Initiated
+              </span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] outline-none border border-destructive/50 text-destructive hover:bg-destructive/10 h-9 px-3 py-2" id="row-refund-btn" style="display:none" type="button">
+            Refund
+          </button>
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] outline-none bg-white text-black hover:bg-white/90 h-9 px-4 py-2 shadow-xs" id="accept-offer-btn" type="button">
+            Accept Offer
+          </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div></main></div></div> 
+<div class="fixed inset-0 z-[100] items-center justify-center bg-black/60 backdrop-blur-sm p-4" id="escrow-modal-overlay" style="display:none">
+<div class="bg-background border border-border rounded-xl shadow-2xl w-full max-w-md overflow-hidden" id="escrow-modal" onclick="event.stopPropagation()">
+<div class="p-6" id="modal-step-1">
+<div class="mb-4">
+<h2 class="text-lg font-semibold">Accept Fameswap Escrow</h2>
+<p class="text-sm text-muted-foreground mt-1">Important information before accepting</p>
+</div>
+<div class="rounded-lg border p-4 mb-4 text-sm space-y-2">
+<p class="font-medium">How escrow works</p>
+<ul class="text-muted-foreground list-disc pl-4 space-y-1">
+<li>Funds are held securely by Fameswap until both parties confirm the account transfer was successful.</li>
+<li>Only after mutual confirmation is the money released to the seller.</li>
+<li>If there is a dispute, a moderator will review the case within 24 hours.</li>
+</ul>
+</div>
+<div class="rounded-lg border p-4 mb-4 text-sm">
+<p class="font-medium mb-2">Only accept Fameswap escrows</p>
+<p class="text-muted-foreground">Payments initiated on other platforms are always blocked and will result in permanent account suspension. Always use official Fameswap escrow for your safety.</p>
+</div>
+<label class="flex items-start gap-3 cursor-pointer mb-3 select-none">
+<input class="mt-1 size-4 rounded border-border accent-primary" id="check-understand" type="checkbox"/>
+<span class="text-sm">I understand the escrow process and will only use Fameswap escrow.</span>
+</label>
+<label class="flex items-start gap-3 cursor-pointer mb-6 select-none">
+<input class="mt-1 size-4 rounded border-border accent-primary" id="check-tos" type="checkbox"/>
+<span class="text-sm">I agree to the <a class="text-primary underline underline-offset-2 hover:text-primary/80" href="https://fameswap.com/page/terms" rel="noopener" target="_blank">Terms of Service</a>.</span>
+</label>
+<div class="flex gap-3">
+<button class="flex-1 h-10 rounded-md border border-input bg-background hover:bg-accent text-sm font-medium transition-colors" id="modal-cancel-1" type="button">Cancel</button>
+<button class="flex-1 h-10 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none" disabled="" id="modal-accept-1" type="button">Accept</button>
+</div>
+</div>
+<div class="p-6 hidden text-center" id="modal-step-2">
+<div id="step2-loading">
+<div class="mx-auto mb-4 flex size-16 items-center justify-center">
+<svg class="size-12 text-primary animate-spin" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-semibold mb-2">Processing...</h2>
+<p class="text-sm text-muted-foreground">Submitting payment to Fameswap escrow</p>
+</div>
+<div class="hidden" id="step2-success">
+<div class="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-green-500/15 text-green-500">
+<svg class="animate-scale-in" fill="none" height="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M20 6 9 17l-5-5"></path></svg>
+</div>
+<h2 class="text-lg font-semibold mb-2">Escrow payment accepted successfully</h2>
+<p class="text-sm text-muted-foreground mb-6">The payment was successfully submitted to Fameswap escrow.</p>
+<button class="w-full h-10 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-medium transition-colors" id="modal-next-2" type="button">Next</button>
+</div>
+</div>
+<div class="p-6 hidden" id="modal-step-3">
+<div class="text-center mb-4">
+<h2 class="text-lg font-semibold">Pay Remaining Escrow Fee</h2>
+<p class="text-sm text-muted-foreground mt-1">Please send <strong>Solana (SOL)</strong> to the address below. If the payment is insufficient, the required amount will update. If you send more than required, the excess will be refunded.</p>
+</div>
+<div class="rounded-lg border bg-muted/30 p-4 mb-4 text-center">
+<p class="text-xs text-muted-foreground mb-1">Fee Amount (5%)</p>
+<p class="text-2xl font-bold" data-fee-amount="1" id="modal-fee-amount">$0.00</p>
+<p class="text-xs text-muted-foreground mt-1">SOL · Solana Network</p>
+</div>
+<div class="flex justify-center mb-4">
+<div class="rounded-lg border p-3 bg-white">
+<img alt="Solana payment QR Code" class="block" height="180" id="solana-qr" src="" width="180"/>
+</div>
+</div>
+<div class="rounded-lg border p-3 mb-4">
+<p class="text-xs text-muted-foreground mb-1">Solana Address</p>
+<div class="flex items-center gap-2">
+<code class="text-xs font-mono flex-1 truncate" id="sol-address"></code>
+<button class="shrink-0 h-8 px-2 rounded-md border text-xs hover:bg-accent transition-colors" id="copy-address-btn" type="button">Copy</button>
+</div>
+</div>
+<p class="text-xs text-muted-foreground text-center mb-4">Please send Solana to this address. After the payment is confirmed on-chain, the escrow will proceed automatically. Underpayment: the remaining amount updates. Overpayment: excess is refunded.</p>
+<div class="flex flex-col gap-2">
+<button class="w-full h-10 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-medium transition-colors" id="modal-close-3" type="button">Okay</button>
+<button class="w-full h-10 rounded-md border border-destructive/50 text-destructive hover:bg-destructive/10 text-sm font-medium transition-colors" id="refund-btn" type="button">Refund full amount to buyer</button>
+</div>
+</div>
+<div class="p-6 hidden" id="modal-step-refund">
+<div class="mb-4">
+<h2 class="text-lg font-semibold">Confirm Refund</h2>
+<p class="text-sm text-muted-foreground mt-1">This will cancel the escrow and return the full amount to the buyer.</p>
+</div>
+<div class="rounded-lg border p-4 mb-6 text-sm">
+<p class="text-muted-foreground">The full amount of <span class="font-medium text-foreground" data-full-amount="1">$500.00</span> will be refunded to the buyer. This action cannot be undone.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 h-10 rounded-md border border-input bg-background hover:bg-accent text-sm font-medium transition-colors" id="refund-cancel" type="button">Cancel</button>
+<button class="flex-1 h-10 rounded-md bg-destructive text-white hover:bg-destructive/90 text-sm font-medium transition-colors" id="refund-confirm" type="button">Confirm Refund</button>
+</div>
+</div>
+</div>
+</div><style>
+  @keyframes scale-in {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.15); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .animate-scale-in { animation: scale-in 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .animate-spin { animation: spin 0.8s linear infinite; }
+</style>
+<script>
+(function() {
+  document.querySelectorAll('[data-slot="collapsible-trigger"]').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var content = null;
+      var li = btn.closest('[data-slot="collapsible"]') || btn.closest('li');
+      if (li) content = li.querySelector('[data-slot="collapsible-content"]');
+      if (!content) {
+        var p = btn.parentElement;
+        while (p && !content) {
+          content = p.querySelector('[data-slot="collapsible-content"]');
+          p = p.parentElement;
+        }
+      }
+      if (!content) return;
+      var isHidden = content.style.display === 'none' || content.hasAttribute('hidden');
+      if (isHidden) {
+        content.style.display = '';
+        content.removeAttribute('hidden');
+        btn.setAttribute('data-state', 'open');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        content.style.display = 'none';
+        content.setAttribute('hidden', '');
+        btn.setAttribute('data-state', 'closed');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+})();
+</script>
+<script>
+(function() {
+  var STORAGE_KEY = 'fameswap_escrow_state_v1';
+  var DATA_KEY = 'fameswap_escrow_data_v1';
+  var currentTab = 'all';
+  var FEE_PERCENT = 5;
+
+  function getSolanaAddress() {
+    return (window.FAMESWAP_SOLANA_ADDRESS || 'FsWapEscrowFee7xK9mP2nQ8rT4vW6yZ0aB3cD5eF7gH9jK').trim();
+  }
+
+  function applySolanaPaymentUI() {
+    var addr = getSolanaAddress();
+    var code = document.getElementById('sol-address');
+    if (code) code.textContent = addr;
+    var qr = document.getElementById('solana-qr');
+    if (qr) {
+      // QR encodes the exact Solana address
+      qr.src = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(addr);
+      qr.alt = 'Solana address QR: ' + addr;
+    }
+  }
+
+
+  var PLATFORM_MAP = {
+    t: { name: 'TikTok', label: 'TikTok' },
+    y: { name: 'YouTube', label: 'YouTube' },
+    x: { name: 'Twitter', label: 'X / Twitter' },
+    tiktok: { name: 'TikTok', label: 'TikTok' },
+    youtube: { name: 'YouTube', label: 'YouTube' },
+    twitter: { name: 'Twitter', label: 'X / Twitter' }
+  };
+
+  function getState() {
+    try { return localStorage.getItem(STORAGE_KEY) || 'initiated'; }
+    catch (e) { return window.__escrowState || 'initiated'; }
+  }
+  function setState(state) {
+    try { localStorage.setItem(STORAGE_KEY, state); }
+    catch (e) { window.__escrowState = state; }
+  }
+
+  function decodeDataParam() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var encoded = params.get('data');
+      if (!encoded) return null;
+      // support standard and url-safe base64
+      var b64 = encoded.replace(/-/g, '+').replace(/_/g, '/');
+      while (b64.length % 4) b64 += '=';
+      var json = atob(b64);
+      return JSON.parse(json);
+    } catch (e) {
+      console.warn('Failed to parse data param', e);
+      return null;
+    }
+  }
+
+  function getPayload() {
+    var fromQuery = decodeDataParam();
+    if (fromQuery) {
+      try { localStorage.setItem(DATA_KEY, JSON.stringify(fromQuery)); } catch (e) {}
+      return fromQuery;
+    }
+    try {
+      var stored = localStorage.getItem(DATA_KEY);
+      if (stored) return JSON.parse(stored);
+    } catch (e) {}
+    return {};
+  }
+
+  function normalize(obj) {
+    obj = obj || {};
+    var cat = (obj.category || obj.platform || 't').toString().toLowerCase();
+    var plat = PLATFORM_MAP[cat] || PLATFORM_MAP.t;
+    var price = parseFloat(obj.price) || 0;
+
+    // Listing / escrow account (the deal)
+    var accountUsername = obj.username || obj.account_username || 'Unknown';
+    var accountAvatar = obj.avatar || obj.account_avatar || obj.profile_image || '';
+
+    // Logged-in user (sidebar bottom-left) — distinct keys
+    var userUsername = obj.user_username || obj.viewer_username || 'username';
+    var userAvatar = obj.user_avatar || obj.viewer_avatar || '';
+
+    return {
+      username: accountUsername,
+      avatar: accountAvatar,
+      category: cat,
+      platformName: plat.name,
+      platformLabel: plat.label,
+      price: price,
+      feeAmount: Math.round((price * FEE_PERCENT / 100) * 100) / 100,
+      user_username: userUsername,
+      user_avatar: userAvatar
+    };
+  }
+
+  var listing = normalize(getPayload());
+
+  function formatUSD(n) {
+    return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function placeholderAvatar(letter) {
+    var L = (letter || '?').toString().charAt(0).toUpperCase();
+    return 'data:image/svg+xml,' + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">' +
+      '<rect fill="#374151" width="40" height="40" rx="8"/>' +
+      '<text x="20" y="26" text-anchor="middle" fill="#9ca3af" font-size="16" font-family="sans-serif">' + L + '</text></svg>'
+    );
+  }
+
+  function applyListingToDOM() {
+    applySolanaPaymentUI();
+    // --- Escrow listing row ---
+    var avatar = document.getElementById('escrow-avatar');
+    var username = document.getElementById('escrow-username');
+    var platform = document.getElementById('escrow-platform');
+    var priceEl = document.getElementById('escrow-price');
+    var feeEl = document.getElementById('escrow-fee-amount');
+
+    if (avatar) {
+      avatar.src = listing.avatar || placeholderAvatar(listing.username);
+      avatar.alt = listing.username;
+      avatar.onerror = function() { this.src = placeholderAvatar(listing.username); };
+    }
+    if (username) username.textContent = listing.username;
+    if (platform) platform.textContent = listing.platformLabel;
+    if (priceEl) priceEl.textContent = formatUSD(listing.price);
+    if (feeEl) feeEl.textContent = formatUSD(listing.feeAmount);
+    var modalFee = document.getElementById('modal-fee-amount');
+    if (modalFee) modalFee.textContent = formatUSD(listing.feeAmount);
+
+    // Modal amounts
+    document.querySelectorAll('[data-fee-amount]').forEach(function(el) {
+      el.textContent = formatUSD(listing.feeAmount);
+    });
+    document.querySelectorAll('[data-full-amount]').forEach(function(el) {
+      el.textContent = formatUSD(listing.price);
+    });
+    var step3 = document.getElementById('modal-step-3');
+    if (step3) {
+      var feeBig = step3.querySelector('.text-2xl.font-bold');
+      if (feeBig) feeBig.textContent = formatUSD(listing.feeAmount);
+    }
+    var refundStep = document.getElementById('modal-step-refund');
+    if (refundStep) {
+      refundStep.querySelectorAll('.font-medium').forEach(function(s) {
+        if (s.textContent.indexOf('$') !== -1) s.textContent = formatUSD(listing.price);
+      });
+    }
+
+    // --- Sidebar logged-in user (bottom left) ---
+    var sideAvatar = document.getElementById('sidebar-user-avatar');
+    var sideName = document.getElementById('sidebar-user-username');
+    if (sideAvatar) {
+      sideAvatar.src = listing.user_avatar || placeholderAvatar(listing.user_username);
+      sideAvatar.alt = listing.user_username;
+      sideAvatar.onerror = function() { this.src = placeholderAvatar(listing.user_username); };
+    }
+    if (sideName) sideName.textContent = listing.user_username;
+  }
+
+  function updateTabCounts(state) {
+    var counts = { all: 0, active: 0, complete: 0, cancelled: 0, dispute: 0 };
+    if (state === 'initiated') counts.all = 1;
+    else if (state === 'accepted' || state === 'paid') { counts.all = 1; counts.active = 1; }
+    else if (state === 'refunded') { counts.all = 1; counts.cancelled = 1; }
+    var map = { all: 'All', active: 'Active', complete: 'Complete', cancelled: 'Cancelled', dispute: 'Dispute' };
+    document.querySelectorAll('[data-tab]').forEach(function(btn) {
+      var key = btn.getAttribute('data-tab');
+      if (map[key]) btn.textContent = map[key] + ' (' + counts[key] + ')';
+    });
+  }
+
+  function updateRowUI(state) {
+    var badge = document.getElementById('status-badge');
+    var btn = document.getElementById('accept-offer-btn');
+    var refundBtn = document.getElementById('row-refund-btn');
+    var row = document.getElementById('escrow-row-1');
+    if (!badge || !btn || !row) return;
+    row.setAttribute('data-status', state);
+
+    if (state === 'accepted') {
+      badge.className = 'inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-medium bg-green-500/10 text-green-500 border-green-500/20';
+      badge.textContent = 'Accepted';
+      btn.style.display = '';
+      btn.textContent = 'Pay Fee';
+      btn.disabled = false;
+      btn.className = 'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2 shadow-xs';
+      if (refundBtn) { refundBtn.style.display = ''; refundBtn.disabled = false; }
+    } else if (state === 'paid') {
+      badge.className = 'inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-medium bg-blue-500/10 text-blue-500 border-blue-500/20';
+      badge.textContent = 'Active';
+      btn.style.display = '';
+      btn.textContent = 'View';
+      btn.disabled = false;
+      btn.className = 'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none border border-input bg-background hover:bg-accent h-9 px-4 py-2';
+      if (refundBtn) { refundBtn.style.display = ''; refundBtn.disabled = false; }
+    } else if (state === 'refunded') {
+      badge.className = 'inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-medium bg-muted text-muted-foreground border-border';
+      badge.textContent = 'Cancelled';
+      btn.style.display = 'none';
+      if (refundBtn) refundBtn.style.display = 'none';
+    } else {
+      badge.className = 'inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-medium bg-yellow-500/10 text-yellow-500 border-yellow-500/20';
+      badge.textContent = 'Initiated';
+      btn.style.display = '';
+      btn.textContent = 'Accept Offer';
+      btn.disabled = false;
+      btn.className = 'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none bg-white text-black hover:bg-white/90 h-9 px-4 py-2 shadow-xs';
+      if (refundBtn) refundBtn.style.display = 'none';
+    }
+  }
+
+  function shouldShowOnTab(tab, state) {
+    if (tab === 'all') return true;
+    if (tab === 'active') return state === 'accepted' || state === 'paid';
+    if (tab === 'cancelled') return state === 'refunded';
+    return false;
+  }
+
+  function filterByTab(tab) {
+    currentTab = tab;
+    var state = getState();
+    var row = document.getElementById('escrow-row-1');
+    var container = document.getElementById('escrow-list-container');
+    if (!row || !container) return;
+    var show = shouldShowOnTab(tab, state);
+    row.style.display = show ? '' : 'none';
+    var emptyId = 'escrow-empty-state';
+    var existingEmpty = document.getElementById(emptyId);
+    var table = container.querySelector('table');
+    var rounded = container.querySelector('.rounded-lg.border.overflow-hidden');
+    if (!show) {
+      if (!existingEmpty) {
+        var empty = document.createElement('div');
+        empty.id = emptyId;
+        empty.className = 'rounded-lg border p-8 text-center';
+        empty.innerHTML = '<svg class="lucide lucide-handshake mx-auto size-12 text-muted-foreground" fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg><h3 class="mt-4 text-lg font-medium">No escrows yet</h3><p class="mt-2 text-sm text-muted-foreground">When you start an escrow transaction, it will appear here.</p>';
+        container.appendChild(empty);
+      }
+      if (table) table.style.display = 'none';
+      if (rounded) rounded.style.display = 'none';
+    } else {
+      if (existingEmpty) existingEmpty.remove();
+      if (table) table.style.display = '';
+      if (rounded) rounded.style.display = '';
+    }
+  }
+
+  function setActiveTab(tab) {
+    document.querySelectorAll('[data-tab]').forEach(function(btn) {
+      var isActive = btn.getAttribute('data-tab') === tab;
+      btn.className = isActive
+        ? 'pb-2 text-sm font-medium transition-colors border-b-2 border-foreground text-foreground'
+        : 'pb-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground';
+    });
+    filterByTab(tab);
+  }
+
+  function refreshUI() {
+    applyListingToDOM();
+    var state = getState();
+    updateRowUI(state);
+    updateTabCounts(state);
+    filterByTab(currentTab);
+  }
+
+  var overlay = document.getElementById('escrow-modal-overlay');
+  var step1 = document.getElementById('modal-step-1');
+  var step2 = document.getElementById('modal-step-2');
+  var step3 = document.getElementById('modal-step-3');
+  var stepRefund = document.getElementById('modal-step-refund');
+  var step2Loading = document.getElementById('step2-loading');
+  var step2Success = document.getElementById('step2-success');
+
+  function showStep(n) {
+    if (step1) step1.classList.toggle('hidden', n !== 1);
+    if (step2) step2.classList.toggle('hidden', n !== 2);
+    if (step3) step3.classList.toggle('hidden', n !== 3);
+    if (stepRefund) stepRefund.classList.toggle('hidden', n !== 'refund');
+  }
+
+  function openModal() {
+    var state = getState();
+    if (state === 'initiated') {
+      showStep(1);
+      var c1 = document.getElementById('check-understand');
+      var c2 = document.getElementById('check-tos');
+      if (c1) c1.checked = false;
+      if (c2) c2.checked = false;
+      var a1 = document.getElementById('modal-accept-1');
+      if (a1) a1.disabled = true;
+      if (step2Loading) step2Loading.classList.remove('hidden');
+      if (step2Success) step2Success.classList.add('hidden');
+    } else if (state === 'accepted' || state === 'paid') {
+      showStep(3);
+    } else return;
+    if (overlay) overlay.style.display = 'flex';
+  }
+
+  function openRefundModal() {
+    var state = getState();
+    if (state !== 'accepted' && state !== 'paid') return;
+    showStep('refund');
+    if (overlay) overlay.style.display = 'flex';
+  }
+
+  function closeModal() {
+    if (overlay) overlay.style.display = 'none';
+  }
+
+  function doRefund() {
+    setState('refunded');
+    refreshUI();
+    closeModal();
+    setActiveTab('cancelled');
+  }
+
+  function updateAcceptEnabled() {
+    var c1 = document.getElementById('check-understand');
+    var c2 = document.getElementById('check-tos');
+    var a1 = document.getElementById('modal-accept-1');
+    if (a1 && c1 && c2) a1.disabled = !(c1.checked && c2.checked);
+  }
+
+  function bind(id, event, fn) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener(event, fn);
+  }
+
+  bind('check-understand', 'change', updateAcceptEnabled);
+  bind('check-tos', 'change', updateAcceptEnabled);
+  bind('modal-cancel-1', 'click', closeModal);
+  bind('modal-accept-1', 'click', function() {
+    setState('accepted');
+    refreshUI();
+    showStep(2);
+    if (step2Loading) step2Loading.classList.remove('hidden');
+    if (step2Success) step2Success.classList.add('hidden');
+    setTimeout(function() {
+      if (step2Loading) step2Loading.classList.add('hidden');
+      if (step2Success) step2Success.classList.remove('hidden');
+    }, 1500);
+  });
+  bind('modal-next-2', 'click', function() { showStep(3); });
+  bind('modal-close-3', 'click', function() {
+    setState('paid');
+    refreshUI();
+    closeModal();
+    setActiveTab('active');
+  });
+  bind('refund-btn', 'click', openRefundModal);
+  bind('row-refund-btn', 'click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    openRefundModal();
+  });
+  bind('refund-cancel', 'click', function() {
+    var state = getState();
+    if (state === 'accepted' || state === 'paid') showStep(3);
+    else closeModal();
+  });
+  bind('refund-confirm', 'click', doRefund);
+  bind('copy-address-btn', 'click', function() {
+    var addrEl = document.getElementById('sol-address');
+    var addr = addrEl ? addrEl.textContent : '';
+    var btn = this;
+    function done() {
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = 'Copy'; }, 1500);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr).then(done).catch(done);
+    } else done();
+  });
+  if (overlay) {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+  }
+  bind('accept-offer-btn', 'click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    openModal();
+  });
+  document.querySelectorAll('[data-tab]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      setActiveTab(btn.getAttribute('data-tab'));
+    });
+  });
+
+  refreshUI();
+  setActiveTab('all');
+})();
+</script>
+</body></html>
